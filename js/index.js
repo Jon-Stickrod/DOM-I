@@ -42,12 +42,15 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const headerNav = document.querySelectorAll('header nav a');
-headerNav[0].textContent = siteContent.nav[0];
-headerNav[1].textContent = 'Product';
-headerNav[2].textContent = 'Vision';
-headerNav[3].textContent = 'Features';
-headerNav[4].textContent = 'About';
-headerNav[5].textContent = 'Contact';
+headerNav[0].textContent = siteContent['nav']['nav-item-1'];
+headerNav[1].textContent = siteContent['nav']['nav-item-2'];
+headerNav[2].textContent = siteContent['nav']['nav-item-3'];
+headerNav[3].textContent = siteContent['nav']['nav-item-4'];
+headerNav[4].textContent = siteContent['nav']['nav-item-5'];
+headerNav[5].textContent = siteContent['nav']['nav-item-6'];
+for(let i=0;i<headerNav.length;i++){
+	console.log(headerNav[i].style.color = "green");
+}
 
 
 let h1 = document.querySelector('.cta-text h1');
@@ -119,3 +122,19 @@ closerH4.textContent = siteContent['contact']['contact-h4'];
 //foter
 let footer = document.querySelector('footer p');
 footer.textContent = siteContent['footer']['copyright'];
+
+
+let NavNode = document.querySelector("nav");
+// .appendChild();
+let Append = document.createElement("a");
+Append.textContent = "Appended";
+Append.style.color = "green"
+console.log(Append);
+NavNode.appendChild(Append);
+
+// .insertBefore();
+let Prepend = document.createElement("a");
+Prepend.textContent = "Prepended";
+Prepend.style.color = "green"
+console.log(Prepend);
+NavNode.insertBefore(Prepend, Append);
