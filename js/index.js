@@ -76,3 +76,7 @@ aboutH4.textContent = siteContent['main-content']['about-h4'];
 
 let aboutP = topContent[1].querySelector('p')
 aboutP.textContent = siteContent['main-content']['about-content'];
+
+//image
+let middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
