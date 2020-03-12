@@ -42,12 +42,37 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const headerNav = document.querySelectorAll('header nav a');
-headerNav[0].textContent = 'Services';
+headerNav[0].textContent = siteContent.nav[0];
 headerNav[1].textContent = 'Product';
 headerNav[2].textContent = 'Vision';
 headerNav[3].textContent = 'Features';
 headerNav[4].textContent = 'About';
 headerNav[5].textContent = 'Contact';
-//const headerNav = document.header.children;
 
-//menuItem[5].textContent = 'Contact';
+
+let h1 = document.querySelector('.cta-text h1');
+h1.textContent = siteContent.cta.h1;
+h1.style.textAlign = 'center';
+
+let button = document.querySelector('.cta-text button');
+button.textContent = siteContent.cta.button;
+
+let image = document.getElementById('cta-img');
+image.setAttribute('src', siteContent['cta']['img-src']);
+
+let topContent = document.querySelectorAll('.top-content .text-content');
+
+//features
+let featuresH4 = topContent[0].querySelector('h4')
+featuresH4.textContent = siteContent['main-content']['features-h4'];
+
+let featuresP = topContent[0].querySelector('p')
+featuresP.textContent = siteContent['main-content']['features-content'];
+
+//about
+
+let aboutH4 = topContent[1].querySelector('h4')
+aboutH4.textContent = siteContent['main-content']['about-h4'];
+
+let aboutP = topContent[1].querySelector('p')
+aboutP.textContent = siteContent['main-content']['about-content'];
