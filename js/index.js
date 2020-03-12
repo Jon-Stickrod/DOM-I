@@ -80,3 +80,29 @@ aboutP.textContent = siteContent['main-content']['about-content'];
 //image
 let middleImg = document.getElementById('middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+//bottom content
+let bottomContent = document.querySelectorAll('.bottom-content .text-content');
+
+//service
+//let  = bottomContent[].querySelector('')
+//__.textContent = siteContent['main-content'][''];
+
+let serviceH4 = bottomContent[0].querySelector('h4')
+serviceH4.textContent = siteContent['main-content']['services-h4'];
+
+let serviceP = bottomContent[0].querySelector('p')
+serviceP.textContent = siteContent['main-content']['services-content'];
+
+//product
+let productH4 = bottomContent[1].querySelector('h4')
+productH4.textContent = siteContent['main-content']['product-h4'];
+
+let productP = bottomContent[1].querySelector('p')
+productP.textContent = siteContent['main-content']['product-content'];
+
+//vision
+let visionH4 = bottomContent[2].querySelector('h4')
+visionH4.textContent = siteContent['main-content']['vision-h4'];
+
+let visionP = bottomContent[2].querySelector('p')
+visionP.textContent = siteContent['main-content']['vision-content'];
